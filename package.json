@@ -1,0 +1,34 @@
+{
+  "name": "Teckblog-TeamJJ",
+  "version": "0.1.0",
+  "main": "src/main.js",
+  "repository": "git@github.com:Team-JJ-official/tech_blog_desktop.git",
+  "author": "Zu_rin <s165810t@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "pack": "electron-builder --dir",
+    "dist:win": "electron-builder --win",
+    "dist:mac": "electron-builder --mac"
+  },
+  "build": {
+    "appId": "com.team-jj.tech_blog_desktop",
+    "win": {
+      "icon": "build/icons/TeamJJ.ico",
+      "target": "nsis"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    },
+    "mac": {
+      "icon": "build/icons/TeamJJ.icns",
+      "target": "dmg"
+    }
+  },
+  "devDependencies": {
+    "electron": "^26.2.4",
+    "electron-builder": "^24.6.4"
+  }
+}
